@@ -1,0 +1,34 @@
+---
+title: "teeth"
+author: "Renee Zhang"
+date: "2020-09-15"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+Import teeth data
+
+```{r import}
+teeth <- read.csv("data/teeth.csv", row.names = 1)
+head(teeth)
+```
+
+#Boxplot
+
+Create boxplots related to the data
+
+```{r boxplot}
+boxplot(len ~ dose, data = teeth)
+boxplot(len ~ supp, data = teeth)
+boxplot(len ~ dose + supp, data = teeth)
+```
+
+#Permutation
+
+```{r pm}
+summary(teeth)
+```
+
