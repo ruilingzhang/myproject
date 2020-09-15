@@ -16,7 +16,7 @@ teeth <- read.csv("data/teeth.csv", row.names = 1)
 head(teeth)
 ```
 
-#Boxplot
+## Boxplot
 
 Create boxplots related to the data
 
@@ -26,7 +26,7 @@ boxplot(len ~ supp, data = teeth)
 boxplot(len ~ dose + supp, data = teeth)
 ```
 
-#Permutation
+## Permutation
 
 ```{r pm}
 summary(teeth)
